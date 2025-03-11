@@ -1,10 +1,10 @@
 import Navigation from "../Navigation/navigation";
 import "./Header.css";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 
 function Header({  handleHomeClick }) {
-  const location = useLocation();
+  // const location = useLocation();
 
 
   return (

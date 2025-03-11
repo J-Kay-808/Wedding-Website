@@ -1,30 +1,30 @@
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import "Navigation.css";
 
+function Navigation({handleHomeClick}) {
+    // const location = useLocation;
 
-const location = useLocation;
-
-return(
-    <nav>
-        <ul className="navigation_list">
-            <li className="navigation-links">
-                <buttton className="navigation-link">Our Story</buttton>
-            </li>
-            <li className="navigation-links">
-                <buttton className="navigation-link">Wedding Details</buttton>
-            </li>
-            <li className="navigation-links">
-                <buttton className="navigation-link">Instagram/Gallery</buttton>
-            </li>
-            <li className="navigation-links">
-                <buttton className="navigation-link">Travel & Stay</buttton>
-            </li>
-            <li className="navigation-links">
-                <buttton className="navigation-link">Contact Us</buttton>
-            </li>
-        </ul>
-
-    </nav>
-)
+    return (
+        <nav>
+            <ul className="navigation_list">
+                <li className="navigation-links">
+                    <buttton className="navigation-link" onClick={handleHomeClick}>Our Story</buttton>
+                </li>
+                <li className="navigation-links">
+                    <buttton className="navigation-link" onClick={handleHomeClick}>Wedding Details</buttton>
+                </li>
+                <li className="navigation-links">
+                    <buttton className="navigation-link" onClick={handleHomeClick}>Instagram/Gallery</buttton>
+                </li>
+                <li className="navigation-links">
+                    <buttton className="navigation-link" onClick={handleHomeClick}>Travel & Stay</buttton>
+                </li>
+                <li className="navigation-links">
+                    <buttton className="navigation-link" onClick={handleHomeClick}>Contact Us</buttton>
+                </li>
+            </ul>
+        </nav>
+    )
+}
 
 export default Navigation;
