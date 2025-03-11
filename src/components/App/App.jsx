@@ -1,35 +1,83 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import './App.css';
+
+import Header from '../Header/header';
+import Main from '../Main/Main';
+
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeModal, setActiveModal] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+
+  const handleSignUp = () => {
+    setActiveModal("success-modal");
+  };
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
+  useEffect(() => {
+    const handleOverlay = (e) => {
+      if (e.target.classList.contains("modal")) {
+        closeModal();
+      }
+    };
+    document.addEventListener("click", handleOverlay);
+    return () => document.removeEventListener("click", handleOverlay);
+  }, []);
+
+  const navigateToLogin = () => {
+    setActiveModal("login");
+  };
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="page" />
+      <Header
+        handleLoginClick={handleLoginClick}
+        isLoggedIn={isLoggedIn}
+        handleHomeClick={handleHomeClick}
+        handleSavedArticlesClick={handleSavedArticlesClick}
+        handleLogOut={handleLogOut} />
+      <Routes>
+        <Route
+          path="*"
+          element={
+            <>
+              <Main />
+
+              <About />
+            </>
+          }
+        />
+        <Route />
+      </Routes >
+
+
     </>
   )
 }
 
-export default App
+export default App;
