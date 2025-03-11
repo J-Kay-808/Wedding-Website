@@ -1,13 +1,24 @@
-# React + Vite
+## **💍 Wedding Website**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **📖 Overview**  
 
-Currently, two official plugins are available:
+- This **Wedding Website** is a **React-based** web app designed to provide guests with all the essential details for the special day. It includes an **💌 RSVP system, 🕰️ event schedule, 📸 gallery, and 📍 location information**. The website is **responsive and user-friendly**, ensuring a seamless experience across all devices.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **🛠️ Technologies**  
 
-## Expanding the ESLint configuration
+- ⚛️ **React:** Front-end framework  
+- 📝 **JavaScript:** Core logic  
+- 🎨 **HTML/CSS:** Structure and styling  
+- 🗺️ **Google Maps API:** Displays wedding location and directions  
+- 📱 **Responsive Design:** Optimized for all devices  
+- 🔄 **Git:** Version control  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Wedding-Website
+## **✨ Features**  
+
+- 🎀 **Elegant, mobile-friendly design**  
+- 💌 **RSVP form for guest confirmations**  
+- 🕰️ **Event schedule and countdown**  
+- 📸 **Photo gallery to share special moments**  
+- 📍 **Location details with interactive maps**  
+
+This wedding website ensures guests have all the details they need to celebrate your big day! 🎊💖  
